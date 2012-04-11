@@ -1,0 +1,93 @@
+body
+{
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+#root
+{
+	text-align:center;
+	width:600px;
+	margin-top:10px;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#garage_sale
+{
+	display:block;
+	text-align:center;
+}
+
+#facebook_connect
+{
+	display:block;
+	text-align:right;
+}
+
+#tuple
+{
+	width: 600px;
+	text-align:left;
+	font-size:10px;
+}
+
+#offer_list
+{
+	display:block;
+	width: 600px;
+	text-align:left;
+	font-size:10px;
+}
+#focused
+{
+	width: 600px;
+	text-align:left;
+	font-size:10px;
+	background: #FFF8DC;
+}
+
+.title
+{
+	font-size:12px;
+	font-style:italic;
+	font-weight:bold;
+}
+#root_div
+{
+	width: 600px;
+	margin-top:10px;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:left;
+}
+#tag_div_stream {
+	display:block;
+	font-size:12px;
+	text-align:center;
+}
+	
+.mouseover
+{
+    cursor:pointer;
+    cursor:hand;
+}
+
+.thumb_tile{
+	float: left;
+	padding-top:20px;
+}
+
+.tag_div_tile {
+	display:block;
+	overflow:hidden;
+	color:#eee;
+	padding-top:10px;
+}
+
+.tile_block{
+	display:inline;
+	float:left;
+	padding: 5px;
+}

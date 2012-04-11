@@ -1,0 +1,8 @@
+html, body { padding: 0; margin: 0; }
+.full-width-hack { padding-right: 20px; }
+textarea {
+    border: 2px solid #eee; padding: 5px; width: 80%;
+}
+input {
+    border: 2px solid #eee; padding: 5px; width: 100%;
+}

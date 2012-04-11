@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<meta charset="UTF-8" />
+	<title>Yet Another Food Review</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="js/jquery.elastic.source.js"></script>
+	<script type="text/javascript" src="js/jquery.form.js"></script>
+	<script type="text/javascript" src="js/jquery.url.js"></script>	
+	<script type="text/javascript" src="js/helper.js"></script>
+	<link type='text/css' href='css/mbutton.css' rel='stylesheet'/>
+	<link type='text/css' href='css/main.css' rel='stylesheet'/>
+	<link type="text/css" href="css/screen.css" rel="stylesheet"/>
+</head>
+<body>
+	<div id='root'>
+		<div>
+			<form id="create_new_tuple" action="/create" enctype="multipart/form-data" method="post">
+				<div id='tuple'>
+					<div id='input_tags' style='display:table;'>
+						<div style='display:table-row;'>
+							<div style='display:table-cell;width:50px;'><label>Food</label></div>
+							<div style='display:table-cell;'><input name='food' type='text' maxlength='10' size='10'/></div>
+							<div style='display:table-cell;padding-left:20px;'><label>Venue</label></div>
+							<div style='display:table-cell;padding-left:20px;'><input name='venue' type='text' maxlength='10' size='10'/></div>
+						</div>
+					</div>
+					<div id='review' style='display:table;'>
+						<div style='display:table-row;'>
+							<div style='display:table-cell;width:50px;vertical-align:top;'><label>Review</label></div>
+							<div style='display:table-cell;padding-left:20px;width:100%;'>
+								<textarea id='review' name='review'></textarea>
+							</div>
+						</div>
+						<div style='display:table-row;'>
+							<div style='display:table-cell;width:50px;'></div>
+							<div style='display:table-cell;padding-left:20px;'>
+								<div style='position:relative;'><div style='display:block;position:absolute;right:100px;'><input type='file' name='review_pic'/></div></div>
+							</div>
+						</div>
+						<div style='display:table-row;'>
+							<div style='display:table-cell;width:50px;padding-top:10px;'></div>
+							<div style='display:table-cell;padding-left:20px;text-align:right;padding-right:100px;padding-top:20px;'><a class='minibutton' href='javascript:submit_form();'><span >+</span></a></div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div style='text-align:center;padding-top:10px;padding-bottom:10px;'><hr style="color:#ffffff;width:100%;opacity:0.5;"/></div>
+	</div>
+	<div style="clear:both;position: relative;width:800px;padding-top:10px;">
+		<div class="thumb_tile">
+		{% for item in items %}
+			<div class="tile_block">
+			{% if item.image %}
+				{% set image_key = item.image.key() %}
+				<img src='/img?type=medium&gkey={{ image_key }}' width='100'/> 
+			{% endif %}
+		{% endfor %}
+		</div>
+	<div>
+</body>
+</html>
